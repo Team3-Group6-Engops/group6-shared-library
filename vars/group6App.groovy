@@ -1,3 +1,4 @@
+def call(String repoUrl){
 pipeline{
     agent any 
     stages{
@@ -102,6 +103,12 @@ pipeline{
                 }
             }
         }
+        stage("Checkout Code") {
+               steps {
+                   git branch: 'main',
+                          url: "${repoUrl}"
+               }
+           }
         stage('parallel-6'){
             parallel{
                 stage('abbey-parallel-stage1'){
