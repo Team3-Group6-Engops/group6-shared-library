@@ -96,14 +96,14 @@ pipeline{
         }
         stage('parallel-5'){
             parallel{
-                stage('Frank-parallel-stage'){
+                stage('Frank-parallel-stage1'){
                     steps{
                         sh 'echo continue to practice DevOps'
                         sh 'chmod +x frank.sh'
                         sh 'bash -x frank.sh'
                     }
                 }
-                stage('Frank-parallel-stage'){
+                stage('Frank-parallel-stage2'){
                     steps{
                         sh 'echo continue to practice DevOps'
                     }
