@@ -43,7 +43,7 @@ pipeline {
            }
            stage('claudi-stage'){
             steps{
-                sh 'cat /tmp'
+                echo "I am Claudi"
             }
            }
        }
