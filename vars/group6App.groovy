@@ -17,8 +17,6 @@ pipeline{
                 stage('abayomi-parallel2'){
                     steps{
                         echo "This is a parallel pipeline"
-                        sh 'chmod +x yomi.sh'
-                        sh 'bash -x yomi.sh'
                     }
                 }
             }
@@ -32,14 +30,12 @@ pipeline{
             parallel{
                 stage('claudi-parallel-stage1'){
                     steps{
-                        sh 'cat /etc/passwd'
                         echo "My name is Claudi"
                     }
                 }
                 stage('claudi-parallel-stage2'){
                     steps{
-                        sh 'chmod +x claudi.sh'
-                        sh 'bash -x claudi.sh'
+                        sh 'cat /etc/passwd'
                     }
                 }
             }
@@ -59,8 +55,7 @@ pipeline{
                 }
                 stage('francisca-parallel-stage2'){
                     steps{
-                        sh 'chmod +x francisca.sh'
-                        sh 'bash -x francisca.sh'
+                        echo "I am an Engineer"
                     }
                 }     
             }
@@ -69,13 +64,12 @@ pipeline{
             parallel{
                 stage('Lateef-parallel-stage1'){
                     steps{
-                        sh 'chmod +x adewale.sh'
-                        sh 'bash -x adewale.sh'
+                        echo "I am Lateef"
                     }
                 }
                 stage('lateef-parallel-stage2'){
                     steps{
-                        sh 'echo i love DevOps alot'
+                        echo "i love DevOps alot"
                     }
                 }
             }
@@ -98,14 +92,12 @@ pipeline{
             parallel{
                 stage('Frank-parallel-stage1'){
                     steps{
-                        sh 'echo continue to practice DevOps'
-                        sh 'chmod +x frank.sh'
-                        sh 'bash -x frank.sh'
+                        echo "continue to practice DevOps"
                     }
                 }
                 stage('Frank-parallel-stage2'){
                     steps{
-                        sh 'echo continue to practice DevOps'
+                        echo "continue to practice DevOps"
                     }
                 }
             }
@@ -114,8 +106,7 @@ pipeline{
             parallel{
                 stage('abbey-parallel-stage1'){
                     steps{
-                        sh 'chmod +x abbey.sh'
-                        sh 'bash -x abbey.sh'
+                        echo "I study DevOps"
                     }
                 }
                 stage('abbey-parallel-stage2'){
